@@ -23,7 +23,7 @@ get '/age' do
 	firstname = params[:f_name]
 	erb :age, locals: {last_name: last_name, firstname: firstname}
 end
-post '/u_age' do
+post '/age' do
 	last_name = params[:l_name]
 	firstname = params[:f_name]
 	age = params[:u_age]
@@ -33,5 +33,5 @@ get '/favcolor' do
 	last_name = params[:l_name]
 	firstname = params[:f_name]
 	age = params[:u_age]
-	erb :favcolor, locals: {last_name: last_name, firstname: firstname, age: age}
+	erb :favcolor, locals: {l_name: last_name, f_name: firstname, u_age: age}
 end
