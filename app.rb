@@ -38,7 +38,7 @@ end
 post '/fav_color' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
-	age = params[:u_age]
+	age = params[:age]
 	favcolor = params[:f_color]
-	redirect '/fav_color?firstname=' + firstname + '&last_name=' + last_name + '&u_age=' + age + '&f_color=' + favcolor
+	redirect '/lucknums?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor
 end
