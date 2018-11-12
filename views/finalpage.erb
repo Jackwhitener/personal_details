@@ -1,7 +1,7 @@
-You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= lucknum1 %>, <%= lucknum2 %>, and <%= lucknum3 %>. What's your favorite animal?
+You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= lucknum1 %>, <%= lucknum2 %>, and <%= lucknum3 %>. Your favorite animal is a(n) <%= favanimal %>
 
-<form method = 'post' action = '/fav_animal'>
-  favorite animal: <input type="text" name="f_animal"><br>
+<form method = 'post' action = '/finalpage'>
+  <input type = "hidden" name = "favanimal" value = "<%= favanimal %>">
   <input type = "hidden" name = "firstname" value = "<%= firstname %>">
   <input type = "hidden" name = "last_name" value = "<%= last_name %>">
   <input type = "hidden" name = "age" value = "<%= age %>">
@@ -9,5 +9,4 @@ You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your
   <input type = "hidden" name = "lucknum1" value = "<%= lucknum1 %>">
   <input type = "hidden" name = "lucknum2" value = "<%= lucknum2 %>">
   <input type = "hidden" name = "lucknum3" value = "<%= lucknum3 %>">
-  <input type="submit" value="Submit">
 </form>
