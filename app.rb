@@ -43,9 +43,19 @@ post '/fav_color' do
 	redirect '/lucknums?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor
 end
 get '/lucknums' do
-		last_name = params[:last_name]
+	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	erb :favcolor, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor}
+	erb :lucknums, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor}
+end
+post '/luck_nums' do
+	last_name = params[:last_name]
+	firstname = params[:firstname]
+	age = params[:age]
+	favcolor = params[:favcolor]
+	lucknum1 = params[:num1]
+	lucknum2 = params[:num2]
+	lucknum3 = params[:num3]
+	redirect '/favanimal?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&lucknum1=' + lucknum1 + '&lucknum2=' + lucknum2 + '&lucknum3=' + lucknum3
 end
