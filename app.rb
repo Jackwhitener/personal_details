@@ -27,7 +27,7 @@ post '/u_age' do
 	last_name = params[:l_name]
 	firstname = params[:f_name]
 	age = params[:u_age]
-	redirect '/favcolor?f_name=' + firstname + '&l_name' + lastname + '&u_age' + age
+	redirect '/favcolor?f_name=' + firstname + '&l_name=' + lastname + '&u_age=' + age
 end
 get '/favcolor' do
 	last_name = params[:l_name]
