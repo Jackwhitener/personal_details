@@ -14,8 +14,8 @@ get '/lastname' do
 end
 post '/last_name' do
 	firstname = params[:f_name]
-	lastname = params[:l_name]
-	redirect '/age?f_name=' + firstname + '&l_name=' + lastname
+	last_name = params[:l_name]
+	redirect '/age?f_name=' + firstname + '&l_name=' + last_name
 end
 
 get '/age' do
@@ -23,15 +23,17 @@ get '/age' do
 	firstname = params[:f_name]
 	erb :age, locals: {last_name: last_name, firstname: firstname}
 end
-post '/age' do
-	last_name = params[:l_name]
-	firstname = params[:f_name]
+post '/age_r' do
+	puts "This is params #{params}"
+	last_name = params[:last_name]
+	firstname = params[:firstname]
 	age = params[:u_age]
-	redirect '/favcolor?f_name=' + firstname + '&l_name=' + lastname + '&u_age=' + age
+	p "age: #{age}"
+	redirect '/favcolor?firstname=' + firstname + '&last_name=' + last_name + '&u_age=' + age
 end
 get '/favcolor' do
-	last_name = params[:l_name]
-	firstname = params[:f_name]
+	last_name = params[:last_name]
+	firstname = params[:firstname]
 	age = params[:u_age]
-	erb :favcolor, locals: {l_name: last_name, f_name: firstname, u_age: age}
+	erb :favcolor, locals: {last_name: last_name, firstname: firstname, age: age}
 end
