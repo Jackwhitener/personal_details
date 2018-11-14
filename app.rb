@@ -40,65 +40,99 @@ post '/fav_color' do
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:f_color]
-	redirect '/lucknums?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor
+	redirect '/lucknums1?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor
 end
-get '/lucknums' do
+get '/lucknums1' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	erb :lucknums, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor}
+	erb :lucknums1, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor}
 end
-post '/luck_nums' do
+post '/luck_nums1' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	lucknum1 = params[:num1]
-	lucknum2 = params[:num2]
-	lucknum3 = params[:num3]
-	redirect '/favanimal?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&lucknum1=' + lucknum1 + '&lucknum2=' + lucknum2 + '&lucknum3=' + lucknum3
+	num1 = params[:num1]
+	redirect '/lucknums2?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1
+end
+get '/lucknums2' do
+	last_name = params[:last_name]
+	firstname = params[:firstname]
+	age = params[:age]
+	favcolor = params[:favcolor]
+	num1 = params[:num1]
+	erb :lucknums2, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1}
+end
+post '/luck_nums2' do
+	last_name = params[:last_name]
+	firstname = params[:firstname]
+	age = params[:age]
+	favcolor = params[:favcolor]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	redirect '/lucknums3?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2
+end
+get '/lucknums3' do
+	last_name = params[:last_name]
+	firstname = params[:firstname]
+	age = params[:age]
+	favcolor = params[:favcolor]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	erb :lucknums3, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1, num2: num2}
+end
+post '/luck_nums3' do
+	last_name = params[:last_name]
+	firstname = params[:firstname]
+	age = params[:age]
+	favcolor = params[:favcolor]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	num3 = params[:num3]
+	redirect '/favanimal?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2 + '&num3=' + num3
 end
 get '/favanimal' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	lucknum1 = params[:lucknum1]
-	lucknum2 = params[:lucknum2]
-	lucknum3 = params[:lucknum3]
-	erb :favanimal, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, lucknum1: lucknum1, lucknum2: lucknum2, lucknum3: lucknum3}
+	num1 = params[:num1]
+	num2 = params[:num2]
+	num3 = params[:num3]
+	erb :favanimal, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1, num2: num2, num3: num3}
 end
 post '/f_animal' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	lucknum1 = params[:lucknum1]
-	lucknum2 = params[:lucknum2]
-	lucknum3 = params[:lucknum3]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	num3 = params[:num3]
 	favanimal = params[:f_animal]
-	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&lucknum1=' + lucknum1 + '&lucknum2=' + lucknum2 + '&lucknum3=' + lucknum3 + '&favanimal=' + favanimal
+	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&favanimal=' + favanimal
 end
 get '/final_page' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	lucknum1 = params[:lucknum1]
-	lucknum2 = params[:lucknum2]
-	lucknum3 = params[:lucknum3]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	num3 = params[:num3]
 	favanimal = params[:favanimal]
-	erb :finalpage, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, lucknum1: lucknum1, lucknum2: lucknum2, lucknum3: lucknum3, favanimal: favanimal}
+	erb :finalpage, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1, num2: num2, num3: num3, favanimal: favanimal}
 end
 post '/finalpage' do
 	last_name = params[:last_name]
 	firstname = params[:firstname]
 	age = params[:age]
 	favcolor = params[:favcolor]
-	lucknum1 = params[:lucknum1]
-	lucknum2 = params[:lucknum2]
-	lucknum3 = params[:lucknum3]
+	num1 = params[:num1]
+	num2 = params[:num2]
+	num3 = params[:num3]
 	favanimal = params[:favanimal]
-	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&lucknum1=' + lucknum1 + '&lucknum2=' + lucknum2 + '&lucknum3=' + lucknum3 + '&favanimal=' + favanimal
+	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&favanimal=' + favanimal
 end

@@ -1,0 +1,12 @@
+You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Give me your third luckiest number. Your luckiest number is <%= num1 %>. Your second luckiest number is <%= num2 %>
+
+<form method = 'post' action = '/luck_nums3'>
+  lucky number 3: <input type="number" name="num3"><br>
+  <input type = "hidden" name = "num1" value = "<%= num1 %>">
+  <input type = "hidden" name = "num2" value = "<%= num2 %>">
+  <input type = "hidden" name = "firstname" value = "<%= firstname %>">
+  <input type = "hidden" name = "last_name" value = "<%= last_name %>">
+  <input type = "hidden" name = "age" value = "<%= age %>">
+  <input type = "hidden" name = "favcolor" value = "<%= favcolor %>">
+  <input type="submit" value="Submit">
+</form>

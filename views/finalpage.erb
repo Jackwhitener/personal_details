@@ -1,4 +1,4 @@
-You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= lucknum1 %>, <%= lucknum2 %>, and <%= lucknum3 %>. Your favorite animal is a(n) <%= favanimal %>
+You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= num1 %>, <%= num2 %>, and <%= num3 %>. Your favorite animal is a(n) <%= favanimal %>
 
 <form method = 'post' action = '/final_page'>
   <input type = "hidden" name = "favanimal" value = "<%= favanimal %>">
@@ -6,7 +6,7 @@ You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your
   <input type = "hidden" name = "last_name" value = "<%= last_name %>">
   <input type = "hidden" name = "age" value = "<%= age %>">
   <input type = "hidden" name = "favcolor" value = "<%= favcolor %>">
-  <input type = "hidden" name = "lucknum1" value = "<%= lucknum1 %>">
-  <input type = "hidden" name = "lucknum2" value = "<%= lucknum2 %>">
-  <input type = "hidden" name = "lucknum3" value = "<%= lucknum3 %>">
+  <input type = "hidden" name = "num1" value = "<%= num1 %>">
+  <input type = "hidden" name = "num2" value = "<%= num2 %>">
+  <input type = "hidden" name = "num3" value = "<%= num3 %>">
 </form>
