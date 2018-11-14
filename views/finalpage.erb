@@ -1,5 +1,8 @@
-You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= num1 %>, <%= num2 %>, and <%= num3 %>. Your favorite animal is a(n) <%= favanimal %>
-
+You are <%= firstname %> <%= last_name %> and you are <%= age %> years old, your favorite color is <%= favcolor %>. Your three luckiest numbers are <%= num1 %>, <%= num2 %>, and <%= num3 %>. Your favorite animal is a(n) <%= favanimal %>.
+Three lucky numbers added up: <%= add_total %>.
+Three lucky numbers subtacted: <%= subtract_total %>.
+Three lucky numbers multiplied: <%= multiply_total %>.
+Three lucky numbers divided: <%= divide_total %>.
 <form method = 'post' action = '/final_page'>
   <input type = "hidden" name = "favanimal" value = "<%= favanimal %>">
   <input type = "hidden" name = "firstname" value = "<%= firstname %>">

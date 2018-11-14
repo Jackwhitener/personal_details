@@ -1,5 +1,5 @@
 require 'sinatra'
-
+require_relative 'math.rb'
 
 get '/' do
 	erb :name
@@ -123,7 +123,11 @@ get '/final_page' do
 	num2 = params[:num2]
 	num3 = params[:num3]
 	favanimal = params[:favanimal]
-	erb :finalpage, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1, num2: num2, num3: num3, favanimal: favanimal}
+	add_total = add(num1.to_i, num2.to_i, num3.to_i)
+	subtract_total = subtract(num1.to_i, num2.to_i, num3.to_i)
+	multiply_total = multiply(num1.to_i, num2.to_i, num3.to_i)
+	divide_total = divide(num1.to_i, num2.to_i, num3.to_i)
+	erb :finalpage, locals: {last_name: last_name, firstname: firstname, age: age, favcolor: favcolor, num1: num1, num2: num2, num3: num3, favanimal: favanimal, add_total: add_total, subtract_total: subtract_total, multiply_total: multiply_total, divide_total: divide_total}
 end
 post '/finalpage' do
 	last_name = params[:last_name]
@@ -134,5 +138,5 @@ post '/finalpage' do
 	num2 = params[:num2]
 	num3 = params[:num3]
 	favanimal = params[:favanimal]
-	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&favanimal=' + favanimal
+	redirect '/final_page?firstname=' + firstname + '&last_name=' + last_name + '&age=' + age + '&favcolor=' + favcolor + '&num1=' + num1 + '&num2=' + num2 + '&num3=' + num3 + '&favanimal=' + favanimal + '&add_total' + add_total + '&subtract_total' + subtract_total + '&multiply_total' + multiply_total + '&divide_total' + divide_total
 end
